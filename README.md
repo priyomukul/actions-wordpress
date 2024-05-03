@@ -34,15 +34,22 @@ If you push to your specified branch and it only contains changes to the WordPre
 
 This action will run PHPCS ([PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)) against [WordPress Coding Standards](https://github.com/WordPress/WordPress-Coding-Standards) and show warnings and errors as annotations in your PRs without adding PHPCS as a dependency or a PHP CodeSniffer config.
 
-### [Automating PR operations](https://github.com/10up/action-pr-automator)
+### [Automating repository operations](https://github.com/10up/action-repo-automator)
 
-[![Support Level](https://img.shields.io/badge/support-beta-blueviolet.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/action-pr-automator.svg)](https://github.com/10up/action-pr-automator/releases/latest) [![License](https://img.shields.io/github/license/10up/action-pr-automator.svg)](https://github.com/10up/action-pr-automator/blob/develop/LICENSE.md) [![CodeQL](https://github.com/10up/action-pr-automator/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/10up/action-pr-automator/actions/workflows/codeql-analysis.yml)
+[![Support Level](https://img.shields.io/badge/support-beta-blueviolet.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/action-repo-automator.svg)](https://github.com/10up/action-repo-automator/releases/latest) [![License](https://img.shields.io/github/license/10up/action-repo-automator.svg)](https://github.com/10up/action-repo-automator/blob/develop/LICENSE.md) [![CodeQL](https://github.com/10up/action-repo-automator/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/10up/action-repo-automator/actions/workflows/codeql-analysis.yml)
 
-This action automates some common PR operations like validating PR description, changlog, and credits.
+This action automates some common repository operations, such as validating PR description, adding labels, auto-assigning issues, auto-requesting reviews on PRs, adding milestones, and many more.
 - **Validate PR description:** It validates PR description to make sure it contains description of the change, changelog and credits. Also, you can set custom comment message for PR author to inform them about PR description requirements.
 - **Add Labels:** It helps with adding label to PR when PR validation pass or fail.
+- **Auto-assign Issues:** This feature helps to automatically assign issue with PR assignee when a linked PR is merged.
 - **Auto-assign PR:** It helps with assigning PR to the author.
 - **Auto request review:** It helps with request review from the team or GitHub user given in the configuration.
+- **Add Milestone:** Automatically adds a Milestone to PRs. If the PR is connected to an issue with a milestone, the same milestone will be added to the PR. Otherwise, the next milestone from the available milestones will be assigned, sorted using version comparison.
+- **Auto-label merge conflicts:** Automatically adds a label to PRs with merge conflicts, and once a conflict is resolved, the label is automatically removed.
+- **Auto-comment merge conflicts:** Automatically adds a comment to PRs with merge conflicts to notify the PR author, and once a conflict is resolved, the comment is automatically removed.
+- **Auto-Sync PR branch:** Automatically keeps the pull request branch up to date with the base branch.
+- **Welcome first-time contributors:** Greet first-time contributors with a warm welcome message on their first issue or PR to the project.
+- **Auto-comment on new Issues/PRs:** Automatically adds a comment to newly opened issues and PRs. This can be used to request users to provide as much context as possible or share links to your contributing guidelines, or anything else that suits your use case.
 
 ### [Publishing generated hook documentation to GitHub Pages](hookdocs-workflow.md)
 

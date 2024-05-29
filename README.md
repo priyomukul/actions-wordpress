@@ -34,6 +34,16 @@ If you push to your specified branch and it only contains changes to the WordPre
 
 This action will run PHPCS ([PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)) against [WordPress Coding Standards](https://github.com/WordPress/WordPress-Coding-Standards) and show warnings and errors as annotations in your PRs without adding PHPCS as a dependency or a PHP CodeSniffer config.
 
+### [Deploying WordPress sites to Pantheon](https://github.com/10up/pantheon-wp-deploy-action)
+
+[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/pantheon-wp-deploy-action.svg)](https://github.com/10up/pantheon-wp-deploy-action/releases/latest) [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/10up/pantheon-wp-deploy-action/blob/trunk/LICENSE) [![Automated Tests](https://github.com/10up/pantheon-wp-deploy-action/actions/workflows/test.yml/badge.svg)](https://github.com/10up/pantheon-wp-deploy-action/actions/workflows/test.yml)
+
+The code in Pantheon's git main branch is production ready (preprod and production environments only) therefore our preferred deployment workflow for GitHub + Pantheon sites is:
+- Use Pantheon multidev environments for the project's lower environments (dev, staging, etc.) and create a GitHub branch with the same name as the multidev environment to automatically deploy to them
+- The GitHub main branch deploys to the Pantheon's `Dev` environment but automatically promotes the code to the Pantheon `Test` environment
+-- We use the Pantheon's `Test` environment as our preprod environment
+- Once the changes have been tested we promote the code in the `Test` environment to `Live`
+
 ### [Automating repository operations](https://github.com/10up/action-repo-automator)
 
 [![Support Level](https://img.shields.io/badge/support-beta-blueviolet.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/action-repo-automator.svg)](https://github.com/10up/action-repo-automator/releases/latest) [![License](https://img.shields.io/github/license/10up/action-repo-automator.svg)](https://github.com/10up/action-repo-automator/blob/develop/LICENSE.md) [![CodeQL](https://github.com/10up/action-repo-automator/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/10up/action-repo-automator/actions/workflows/codeql-analysis.yml)

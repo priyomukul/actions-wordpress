@@ -44,6 +44,13 @@ The code in Pantheon's git main branch is production ready (preprod and producti
 -- We use the Pantheon's `Test` environment as our preprod environment
 - Once the changes have been tested we promote the code in the `Test` environment to `Live`
 
+### [WordPress Scanner Action](https://github.com/10up/wp-scanner-action)
+
+[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/wp-scanner-action.svg)](https://github.com/10up/wp-scanner-action/releases/latest) [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/10up/wp-scanner-action/blob/trunk/LICENSE.md) [![Automated Tests](https://github.com/10up/wp-scanner-action/actions/workflows/tests.yml/badge.svg)](https://github.com/10up/wp-scanner-action/actions/workflows/tests.yml)
+
+GitHub Action to perform various checks for WordPress sites (Syntax, Virus, known vulnerabilities).  This Action leverages our own [WP-CLI Vulnerability Scanner](https://github.com/10up/wpcli-vulnerability-scanner) to perform the known vulnerabilities scanning of WordPress plugins and themes. WP-CLI Vulnerability Scanner works with [WPScan](https://wpscan.com), [Patchstack](https://patchstack.com/) and [Wordfence Intelligence](https://www.wordfence.com/threat-intel/) to check reported vulnerabilities; you can choose any one of these three to use.
+***Note**: Authentication is optional for the Wordfence Intelligence Vulnerability API.*
+
 ### [Automating repository operations](https://github.com/10up/action-repo-automator)
 
 [![Support Level](https://img.shields.io/badge/support-beta-blueviolet.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/action-repo-automator.svg)](https://github.com/10up/action-repo-automator/releases/latest) [![License](https://img.shields.io/github/license/10up/action-repo-automator.svg)](https://github.com/10up/action-repo-automator/blob/develop/LICENSE.md) [![CodeQL](https://github.com/10up/action-repo-automator/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/10up/action-repo-automator/actions/workflows/codeql-analysis.yml)
